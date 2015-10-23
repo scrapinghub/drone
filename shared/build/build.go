@@ -443,6 +443,8 @@ func (b *Builder) writeDockerfile(dir string) error {
 
 	switch {
 	case strings.HasPrefix(b.Build.Image, "bradrydzewski/"),
+		strings.HasPrefix(b.Build.Image, "i.scrapinghub.com/drone"),
+		strings.HasPrefix(b.Build.Image, "scrapinghub/drone"),
 		strings.HasPrefix(b.Build.Image, "drone/"):
 		// the default user for all official Drone image
 		// is the "ubuntu" user, since all build images
