@@ -125,6 +125,7 @@ func (r *Repo) Commands() []string {
 			cmds = append(cmds, fmt.Sprintf("git checkout -qf %s", r.Commit))
 		}
 	}
+	cmds = append(cmds, "if type -p git-restore-mtime; then git restore-mtime; fi")
 
 	return cmds
 }
