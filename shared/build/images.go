@@ -237,4 +237,10 @@ var builders = map[string]*image{
 	"scala":       {Tag: "bradrydzewski/scala:2.10.3"},
 	"scala2.10.3": {Tag: "bradrydzewski/scala:2.10.3"},
 	"scala2.9.3":  {Tag: "bradrydzewski/scala:2.9.3"},
+
+	// Company build images
+	"scrapinghub":    {Tag: "i.scrapinghub.com/drone-build/master:v1"},
+	"scrapinghub:v1": {Tag: "i.scrapinghub.com/drone-build/master:v1"},
+	"scrapinghub:v2": {Tag: "i.scrapinghub.com/drone-build/master:v2"},
+	"scrapinghub:v3": {Tag: "i.scrapinghub.com/drone-build/master:v3"},
 }
