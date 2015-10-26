@@ -110,6 +110,10 @@ func (b *Build) WriteBuild(f *buildfile.Buildfile) {
 		f.WriteEnv(parts[0], parts[1])
 	}
 
+	// Source a bash script prior to project scripts just after all build
+	// related envvars are set
+	f.WriteCmd("if test -f /post-drone-env.sh; then source /post-drone-env.sh; fi")
+
 	// append build commands
 	for _, cmd := range b.Script {
 		f.WriteCmd(cmd)
