@@ -44,7 +44,7 @@ func GenerateToken(c context.Context, r *http.Request, user *model.User) (string
 	token := jwt.New(jwt.GetSigningMethod("HS256"))
 	token.Claims["user_id"] = user.ID
 	token.Claims["audience"] = httputil.GetURL(r)
-	token.Claims["expires"] = time.Now().UTC().Add(time.Hour * 72).Unix()
+	token.Claims["expires"] = time.Now().UTC().Add(*expires).Unix()
 	return token.SignedString([]byte(*secret))
 }
 
