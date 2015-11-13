@@ -243,4 +243,5 @@ var builders = map[string]*image{
 	"scrapinghub:v1": {Tag: "i.scrapinghub.com/drone-build/master:v1"},
 	"scrapinghub:v2": {Tag: "i.scrapinghub.com/drone-build/master:v2"},
 	"scrapinghub:v3": {Tag: "i.scrapinghub.com/drone-build/master:v3"},
+        "scrapinghub:tls": {Tag: "i.scrapinghub.com/drone-build/tls"},
 }
